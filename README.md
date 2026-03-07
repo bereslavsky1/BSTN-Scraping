@@ -27,11 +27,12 @@ Hey! This is a custom-built asynchronous scraper for the BSTN store. I wrote thi
 
 Don't want to install Python or mess with the terminal? You can just download the compiled program.
 
-1. Go to the **Releases** tab on the right side of this page.
-2. Download the latest `main.exe` file.
+1. Go to the **[Releases](https://github.com/bereslavsky1/BSTN-Scraping/releases)** tab on the right side of this page.
+2. Download the latest `BSTN-Scraper-v1.0.exe` file.
 3. Just double-click and run it! *(The database and images will automatically be created in the same folder where the .exe is located).*
 
-**[PLACE_HOLDER_FOR_IMG_RELEASE]**
+<img width="367" height="116" alt="Screenshot_43" src="https://github.com/user-attachments/assets/5d8b0628-270c-42ce-beed-68d436b12888" />
+
 
 ---
 
@@ -39,7 +40,7 @@ Don't want to install Python or mess with the terminal? You can just download th
 
 1. **Clone the repo:**
    ```bash
-   git clone [https://github.com/bereslavsky1/BSTN-Scraping.git](https://github.com/bereslavsky1/BSTN-Scraping.git)
+   git clone https://github.com/bereslavsky1/BSTN-Scraping.git
    cd BSTN-Scraping
    ```
 
