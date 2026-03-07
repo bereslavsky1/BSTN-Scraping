@@ -1,0 +1,8 @@
+# Bypass Cloudflare protection
+cloudscraper==1.2.71
+
+# Parse HTML and XML content
+beautifulsoup4==4.14.3
+
+# Faster XML processing for sitemaps
+lxml==6.0.2

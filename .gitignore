@@ -1,0 +1,20 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Database file (keep your data local)
+bstn_products.db
+
+# Folder with downloaded images
+product_images/
+
+# PyCharm internal settings
+.idea/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Local OS files
+.DS_Store
+Thumbs.db
