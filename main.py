@@ -142,43 +142,22 @@ def init_system(lang):
     cursor.execute('''
                    CREATE TABLE IF NOT EXISTS products
                    (
-                       id
-                       INTEGER
-                       PRIMARY
-                       KEY
-                       AUTOINCREMENT,
-                       unique_id
-                       TEXT
+                       id INTEGER PRIMARY KEY AUTOINCREMENT,
+                       unique_id TEXT UNIQUE,
+                       gender TEXT,
+                       item_type TEXT,
+                       category TEXT,
+                       brand TEXT,
+                       name TEXT,
+                       color TEXT,
+                       price TEXT,
+                       description TEXT,
+                       sizes TEXT,
+                       is_available INTEGER,
+                       url TEXT
                        UNIQUE,
-                       gender
-                       TEXT,
-                       item_type
-                       TEXT,
-                       category
-                       TEXT,
-                       brand
-                       TEXT,
-                       name
-                       TEXT,
-                       color
-                       TEXT,
-                       price
-                       TEXT,
-                       description
-                       TEXT,
-                       sizes
-                       TEXT,
-                       is_available
-                       INTEGER,
-                       url
-                       TEXT
-                       UNIQUE,
-                       folder_path
-                       TEXT,
-                       created_at
-                       TIMESTAMP
-                       DEFAULT
-                       CURRENT_TIMESTAMP
+                       folder_path TEXT,
+                       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                    )
                    ''')
     conn.commit()
