@@ -4,7 +4,7 @@
 
 Hey! This is a custom-built asynchronous scraper for the BSTN store. I wrote this to easily pull product data (sneakers, streetwear, etc.) without getting blocked by bot protection. It grabs everything from prices and sizes to high-res images and organizes it all neatly into a local SQLite database.
 
-**[PLACE_HOLDER_FOR_GIF_TERMINAL]**
+![BSTN-Scraping (1)](https://github.com/user-attachments/assets/0d4e8451-4ca7-4359-87ea-3a16870d6c9d)
 
 ## 🔥 What it actually does
 
