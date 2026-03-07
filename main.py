@@ -57,7 +57,7 @@ TRANSLATIONS = {
 UI = {
     'en': {
         'init': '🚀 System initialization...',
-        'db_ready': '🗄 Database ready.',
+        'db_ready': '🗄 Database ready. Path: {}',
         'map_main': '🗺️ Opening main sitemap: ',
         'map_list': '📑 Reading product list: ',
         'found_maps': '✅ Found {} product lists. Mode: {}. Press Ctrl+C to stop',
@@ -77,11 +77,12 @@ UI = {
         'mode_1': '1 - TEST MODE (1 Item)',
         'mode_2': '2 - FULL PARSE',
         'mode_prompt': 'Mode (1 or 2): ',
-        'mode_error': '❌ Error: Enter 1 or 2.'
+        'mode_error': '❌ Error: Enter 1 or 2.',
+        'exit_prompt': 'Press Enter to exit...'
     },
     'ru': {
         'init': '🚀 Инициализация системы...',
-        'db_ready': '🗄 База данных готова.',
+        'db_ready': '🗄 База данных готова. Сохранено в: {}',
         'map_main': '🗺️ Открываю главную карту сайта: ',
         'map_list': '📑 Читаю список товаров: ',
         'found_maps': '✅ Найдено {} списков с товарами. Режим: {}. Для остановки нажми Ctrl+C',
@@ -101,11 +102,12 @@ UI = {
         'mode_1': '1 - ТЕСТОВЫЙ РЕЖИМ (1 товар)',
         'mode_2': '2 - ПОЛНЫЙ ПОЛЕТ (Парсинг всего сайта)',
         'mode_prompt': 'Режим (1 или 2): ',
-        'mode_error': '❌ Ошибка: Введите 1 или 2.'
+        'mode_error': '❌ Ошибка: Введите 1 или 2.',
+        'exit_prompt': 'Нажми Enter для выхода...'
     },
     'de': {
         'init': '🚀 Systeminitialisierung...',
-        'db_ready': '🗄 Datenbank bereit.',
+        'db_ready': '🗄 Datenbank bereit. Pfad: {}',
         'map_main': '🗺️ Öffne Haupt-Sitemap: ',
         'map_list': '📑 Lese Produktliste: ',
         'found_maps': '✅ {} Produktlisten gefunden. Modus: {}. Zum Stoppen Strg+C drücken',
@@ -125,7 +127,8 @@ UI = {
         'mode_1': '1 - TESTMODUS (1 Artikel)',
         'mode_2': '2 - VOLLSTÄNDIGER PARSE (Gesamte Seite)',
         'mode_prompt': 'Modus (1 oder 2): ',
-        'mode_error': '❌ Fehler: Bitte 1 oder 2 eingeben.'
+        'mode_error': '❌ Fehler: Bitte 1 oder 2 eingeben.',
+        'exit_prompt': 'Drücke Enter, um zu beenden...'
     }
 }
 
@@ -162,7 +165,9 @@ def init_system(lang):
                    ''')
     conn.commit()
     conn.close()
-    print(UI[lang]['db_ready'])
+
+    db_path = os.path.abspath(DB_NAME)
+    print(UI[lang]['db_ready'].format(db_path))
 
 
 # --- FIND TYPE AND GENDER ---
@@ -533,6 +538,8 @@ if __name__ == "__main__":
                         stop_parsing = True
                         break
 
+
+
         except KeyboardInterrupt:
             # If user presses Ctrl+C, stop program safely
             print(UI[LANG]['stop_ctrlc'])
@@ -540,3 +547,7 @@ if __name__ == "__main__":
             # Close database so file is not locked
             conn.close()
             print(UI[LANG]['close_db'])
+
+            # Добавляем паузу с правильным языком, чтобы окно не закрывалось само
+            print("\n========================================")
+            input(UI[LANG]['exit_prompt'])

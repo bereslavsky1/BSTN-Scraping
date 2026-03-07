@@ -18,3 +18,9 @@ __pycache__/
 # Local OS files
 .DS_Store
 Thumbs.db
+
+# PyInstaller build files
+build/
+dist/
+*.spec
+*.exe
