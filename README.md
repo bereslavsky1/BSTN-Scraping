@@ -42,10 +42,10 @@ Hey! This is a custom-built asynchronous scraper for the BSTN store. I wrote thi
 ## 📊 Data Preview
 
 ### Database Structure
-**[PLACE_HOLDER_FOR_IMG_DB]**
+<img width="1911" height="602" alt="Screenshot_37" src="https://github.com/user-attachments/assets/9e19052a-2334-4a3d-955f-0bd423b05dc8" />
 
 ### Media Downloading
-**[PLACE_HOLDER_FOR_IMG_FOLDERS]**
+<img width="2023" height="1935" alt="Media Downloading" src="https://github.com/user-attachments/assets/a6ecf085-f47f-4ec8-9714-3dccbd8d431b" />
 
 ## 📂 What's inside?
 
